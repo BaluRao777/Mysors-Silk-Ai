@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    background: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial;
+}
+
+.phone {
+    width: 375px;
+    height: 750px;
+    background: white;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.notch {
+    width: 150px;
+    height: 25px;
+    background: black;
+    border-radius: 20px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header {
+    background: #075E54;
+    color: white;
+    padding: 40px 15px 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.name { font-weight: bold; }
+.status { font-size: 12px; }
+
+.chat-area {
+    flex: 1;
+    background: #ECE5DD;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.message {
+    padding: 8px 12px;
+    border-radius: 12px;
+    max-width: 75%;
+    font-size: 14px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.user {
+    background: #DCF8C6;
+    align-self: flex-end;
+}
+
+.bot {
+    background: white;
+    align-self: flex-start;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.button-group button {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    background: #25D366;
+    color: white;
+    cursor: pointer;
+}
+
+.video-card {
+    background: white;
+    padding: 8px;
+    border-radius: 12px;
+    max-width: 75%;
+}
+
+.video-card video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.input-area {
+    display: flex;
+    padding: 10px;
+    background: #f0f0f0;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+}
+
+.input-area button {
+    margin-left: 5px;
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 8px 12px;
+}
+
+/* ===============================
+   SALES ANALYTICS CARD
+================================ */
+.analytics-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.analytics-header {
+    background: #075E54;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.analytics-item {
+    padding: 15px;
+    border: 1px solid #eee;
+}
+
+.analytics-item h4 {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.analytics-item p {
+    margin: 5px 0 0 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= FILTER MODAL ================= */
+
+.filter-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+.filter-modal {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70%;
+    background: white;
+    border-radius: 20px 20px 0 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    animation: slideUp 0.3s ease;
+}
+
+.filter-header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.filter-footer {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+}
+
+.filter-footer button {
+    flex: 1;
+    margin: 0 5px;
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
